@@ -8,21 +8,20 @@
 # * Afficher le resultat
 
 def chiffre_de_cesar(text, decal)
-  asciis = 0
-  letters = 0
-  text = text.downcase.split(//)
-  text.each do |letter|
-    asciis = letter.ord + decal
+  lettres = nil
+  asciis = nil
+  new_lettre = nil
+
+  lettres = text.downcase.split(//)
+  puts lettres
+  lettres.each do |l|
+    asciis = l.ord + decal
     puts asciis
   end
     asciis.each do |ascii|
-      letters = ascii.chr
-      puts letters
+      new_lettre = ascii.chr
+      puts new_lettre
     end
-    # asciis.each do |ascii|
-    #   new1 = ascii.chr
-    #   puts new1
-    #  end
 end
 
-puts chiffre_de_cesar("Hello",2)
+chiffre_de_cesar("Hello",2)
